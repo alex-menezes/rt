@@ -1,0 +1,22 @@
+[2024-02-18T00:14:15.138+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_teste.save_to_mysql manual__2024-02-18T00:14:09.563041+00:00 [queued]>
+[2024-02-18T00:14:15.151+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_teste.save_to_mysql manual__2024-02-18T00:14:09.563041+00:00 [queued]>
+[2024-02-18T00:14:15.151+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-02-18T00:14:15.173+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): save_to_mysql> on 2024-02-18 00:14:09.563041+00:00
+[2024-02-18T00:14:15.181+0000] {standard_task_runner.py:57} INFO - Started process 23204 to run task
+[2024-02-18T00:14:15.184+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'api_teste', 'save_to_mysql', 'manual__2024-02-18T00:14:09.563041+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/teste_api_to_mysql.py', '--cfg-path', '/tmp/tmpkh3ritez']
+[2024-02-18T00:14:15.185+0000] {standard_task_runner.py:85} INFO - Job 41: Subtask save_to_mysql
+[2024-02-18T00:14:15.345+0000] {task_command.py:416} INFO - Running <TaskInstance: api_teste.save_to_mysql manual__2024-02-18T00:14:09.563041+00:00 [running]> on host airflow-worker
+[2024-02-18T00:14:15.625+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='api_teste' AIRFLOW_CTX_TASK_ID='save_to_mysql' AIRFLOW_CTX_EXECUTION_DATE='2024-02-18T00:14:09.563041+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-18T00:14:09.563041+00:00'
+[2024-02-18T00:14:15.681+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/teste_api_to_mysql.py", line 23, in save_to_mysql
+    engine = connection = create_engine()
+TypeError: create_engine() missing 1 required positional argument: 'url'
+[2024-02-18T00:14:15.730+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=api_teste, task_id=save_to_mysql, execution_date=20240218T001409, start_date=20240218T001415, end_date=20240218T001415
+[2024-02-18T00:14:15.761+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 41 for task save_to_mysql (create_engine() missing 1 required positional argument: 'url'; 23204)
+[2024-02-18T00:14:15.801+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-02-18T00:14:15.868+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

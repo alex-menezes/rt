@@ -1,0 +1,29 @@
+[2024-02-17T23:27:04.180+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_to_mysql_with_xcom.save_to_mysql manual__2024-02-17T23:26:58.893126+00:00 [queued]>
+[2024-02-17T23:27:04.189+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_to_mysql_with_xcom.save_to_mysql manual__2024-02-17T23:26:58.893126+00:00 [queued]>
+[2024-02-17T23:27:04.189+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2024-02-17T23:27:04.205+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): save_to_mysql> on 2024-02-17 23:26:58.893126+00:00
+[2024-02-17T23:27:04.210+0000] {standard_task_runner.py:57} INFO - Started process 22410 to run task
+[2024-02-17T23:27:04.212+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'api_to_mysql_with_xcom', 'save_to_mysql', 'manual__2024-02-17T23:26:58.893126+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/teste_api2.py', '--cfg-path', '/tmp/tmpi8p0fl3b']
+[2024-02-17T23:27:04.216+0000] {standard_task_runner.py:85} INFO - Job 19: Subtask save_to_mysql
+[2024-02-17T23:27:04.357+0000] {task_command.py:416} INFO - Running <TaskInstance: api_to_mysql_with_xcom.save_to_mysql manual__2024-02-17T23:26:58.893126+00:00 [running]> on host airflow-worker
+[2024-02-17T23:27:04.597+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='api_to_mysql_with_xcom' AIRFLOW_CTX_TASK_ID='save_to_mysql' AIRFLOW_CTX_EXECUTION_DATE='2024-02-17T23:26:58.893126+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-17T23:26:58.893126+00:00'
+[2024-02-17T23:27:04.647+0000] {logging_mixin.py:154} INFO - id
+[2024-02-17T23:27:04.648+0000] {logging_mixin.py:154} INFO - uid
+[2024-02-17T23:27:04.648+0000] {logging_mixin.py:154} INFO - password
+[2024-02-17T23:27:04.648+0000] {logging_mixin.py:154} INFO - first_name
+[2024-02-17T23:27:04.648+0000] {logging_mixin.py:154} INFO - last_name
+[2024-02-17T23:27:04.648+0000] {logging_mixin.py:154} INFO - username
+[2024-02-17T23:27:04.649+0000] {logging_mixin.py:154} INFO - email
+[2024-02-17T23:27:04.649+0000] {logging_mixin.py:154} INFO - avatar
+[2024-02-17T23:27:04.649+0000] {logging_mixin.py:154} INFO - gender
+[2024-02-17T23:27:04.649+0000] {logging_mixin.py:154} INFO - phone_number
+[2024-02-17T23:27:04.649+0000] {logging_mixin.py:154} INFO - social_insurance_number
+[2024-02-17T23:27:04.650+0000] {logging_mixin.py:154} INFO - date_of_birth
+[2024-02-17T23:27:04.650+0000] {logging_mixin.py:154} INFO - employment
+[2024-02-17T23:27:04.650+0000] {logging_mixin.py:154} INFO - address
+[2024-02-17T23:27:04.650+0000] {logging_mixin.py:154} INFO - credit_card
+[2024-02-17T23:27:04.650+0000] {logging_mixin.py:154} INFO - subscription
+[2024-02-17T23:27:04.650+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-02-17T23:27:04.689+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=api_to_mysql_with_xcom, task_id=save_to_mysql, execution_date=20240217T232658, start_date=20240217T232704, end_date=20240217T232704
+[2024-02-17T23:27:04.748+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-02-17T23:27:04.802+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
